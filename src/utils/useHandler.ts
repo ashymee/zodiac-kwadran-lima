@@ -18,7 +18,7 @@ const useHandler = () => {
 
   useEffect(() => {
     const fetchZodiac = async () => {
-      await fetch("http://localhost:3000/data/TZodiac.json")
+      await fetch("https://zodiac-kwadran-lima.vercel.app/data/TZodiac.json")
         .then((res) => res.json())
         .then((json) => setTZodiac(json));
     };
