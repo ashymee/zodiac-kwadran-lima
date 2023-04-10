@@ -1,0 +1,74 @@
+[
+    {
+      "zodiacName": "Aquarius",
+      "startDate": "20 Jan",
+      "endDate": "18 Feb",
+      "day": 21
+    },
+    {
+      "zodiacName": "Pisces",
+      "startDate": "19 Feb",
+      "endDate": "20 Mar",
+      "day": 20
+    },
+    {
+      "zodiacName": "Aries",
+      "startDate": "21 Mar",
+      "endDate": "19 Apr",
+      "day": 21
+    },
+    {
+      "zodiacName": "Taurus",
+      "startDate": "20 Apr",
+      "endDate": "20 May",
+      "day": 21
+    },
+    {
+      "zodiacName": "Gemini",
+      "startDate": "21 May",
+      "endDate": "20 Jun",
+      "day": 22
+    },
+    {
+      "zodiacName": "Cancer",
+      "startDate": "21 Jun",
+      "endDate": "22 Jul",
+      "day": 22
+    },
+    {
+      "zodiacName": "Leo",
+      "startDate": "23 Jul",
+      "endDate": "22 Aug",
+      "day": 23
+    },
+    {
+      "zodiacName": "Virgo",
+      "startDate": "23 Aug",
+      "endDate": "22 Sep",
+      "day": 24
+    },
+    {
+      "zodiacName": "Libra",
+      "startDate": "23 Sep",
+      "endDate": "22 Oct",
+      "day": 24
+    },
+    {
+      "zodiacName": "Scorpio",
+      "startDate": "23 Oct",
+      "endDate": "21 Nov",
+      "day": 24
+    },
+    {
+      "zodiacName": "Sagittarius",
+      "startDate": "22 Nov",
+      "endDate": "21 Dec",
+      "day": 23
+    },
+    {
+      "zodiacName": "Capricorn",
+      "startDate": "22 Dec",
+      "endDate": "19 Jan",
+      "day": 22
+    }
+  ]
