@@ -1,0 +1,95 @@
+#main {
+  @apply h-screen w-screen flex items-center justify-center bg-gradient-to-tr from-purple-700 via-purple-800 to-purple-900;
+
+  .submain-container {
+    @apply w-full h-full md:w-96 md:h-96 border-4 border-purple-700 md:rounded-lg bg-purple-500 relative flex flex-col overflow-hidden;
+
+    nav {
+      @apply flex border-b border-gray-100 text-sm font-medium flex-none;
+
+      .btn-tab {
+        @apply -mb-px border-b p-4;
+
+        &.inactive {
+          @apply border-transparent text-purple-700 hover:text-purple-900;
+        }
+
+        &.active {
+          @apply border-current text-purple-900 font-bold;
+        }
+      } /* end of .btn-tab */
+    } /* end of nav */
+
+    form {
+      @apply flex flex-col justify-center p-3 h-full w-full flex-1;
+
+      .input-field-container {
+        @apply flex-1 h-full space-y-5;
+
+        label {
+          @apply space-x-2 flex items-center w-full;
+
+          .field-name {
+            @apply block flex-none w-28 text-purple-800;
+          }
+
+          .input-field {
+            @apply flex-1 p-2 border rounded-lg w-full text-sm;
+          }
+
+          .birthDate-container {
+            @apply flex-1 flex items-center space-x-2 w-full;
+
+            .input-field {
+              @apply flex-1 p-2 border rounded-lg w-full text-sm;
+            }
+          }
+        } /* end of label */
+      } /* end of .input-field-container */
+
+      .submit-btn {
+        @apply flex-none px-4 py-2 rounded-lg text-white;
+
+        &.not-allowed {
+          @apply bg-purple-600 cursor-not-allowed;
+        }
+
+        &.allowed {
+          @apply bg-purple-800 hover:bg-purple-900;
+        }
+      }
+    } /* end of form */
+
+    .submitted-form-container {
+      @apply p-3 text-purple-900 flex flex-col h-full;
+
+      .text-container {
+        @apply flex-1 h-full;
+      }
+
+      .back-btn {
+        @apply flex-none w-full px-4 py-2 rounded-lg text-white bg-purple-800;
+      }
+    } /* end of .submitted-form-container */
+
+    .zodiac-list-container {
+      @apply p-2;
+
+      .zodiac-item-container {
+        @apply flex items-center justify-between px-2 rounded-lg;
+
+        &:hover {
+          @apply bg-purple-600/50;
+        }
+
+        .zodiac-name {
+          @apply font-bold text-purple-800;
+        }
+
+        .zodiac-date {
+          @apply text-sm text-slate-700;
+        }
+      }
+    }
+  } /* end of .submain-container */
+}

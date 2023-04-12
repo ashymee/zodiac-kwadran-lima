@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import useStores, { FormDataProps } from "./useStores";
+
+const isInDevelopment = process.env.NODE_ENV === "development";
 
 interface IZodiac {
   zodiacName: string;
@@ -14,11 +17,19 @@ interface ageProps {
 }
 
 const useHandler = () => {
+  const { setIsValid, formData, setFormData, setUserData } = useStores();
+
+  const tabs = ["Calculator", "Zodiac List"];
+
   const [TZodiac, setTZodiac] = useState<IZodiac[]>([]);
+
+  const url = isInDevelopment
+    ? "http://localhost:3000"
+    : "https://zodiac-kwadran-lima.vercel.app";
 
   useEffect(() => {
     const fetchZodiac = async () => {
-      await fetch("https://zodiac-kwadran-lima.vercel.app/data/TZodiac.json")
+      await fetch(`${url}/data/TZodiac.json`)
         .then((res) => res.json())
         .then((json) => setTZodiac(json));
     };
@@ -68,10 +79,60 @@ const useHandler = () => {
     };
   };
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const { day, month, year } = formData.birthDate;
+    const date = `${year}-${month}-${day}`;
+    const birthDate = new Date(date);
+
+    setIsValid(true);
+
+    setUserData({
+      name: formData.name,
+      day: +day,
+      month: +month,
+      year: getAge({ day: +day, month: +month, year: +year }).year,
+      zodiac: getZodiac(birthDate),
+    });
+  };
+
+  const handleChangeName = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const data = {
+      ...formData,
+      [name]: value,
+    };
+    setFormData(data);
+  };
+
+  const handleChangeBirthDate = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const data: FormDataProps = {
+      ...formData,
+      birthDate: {
+        ...formData.birthDate,
+        [name]: value,
+      },
+    };
+    setFormData(data);
+  };
+
+  const emptyField =
+    formData.name === "" ||
+    formData.birthDate.day === "" ||
+    formData.birthDate.month === "" ||
+    formData.birthDate.year === "";
+
   return {
     getZodiac,
     getAge,
     TZodiac,
+    handleSubmit,
+    emptyField,
+    tabs,
+    handleChangeName,
+    handleChangeBirthDate,
   };
 };
 
