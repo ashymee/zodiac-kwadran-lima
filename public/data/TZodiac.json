@@ -3,72 +3,84 @@
       "zodiacName": "Aquarius",
       "startDate": "20 Jan",
       "endDate": "18 Feb",
+      "symbol": "♒︎",
       "day": 21
     },
     {
       "zodiacName": "Pisces",
       "startDate": "19 Feb",
       "endDate": "20 Mar",
+      "symbol": "♓︎",
       "day": 20
     },
     {
       "zodiacName": "Aries",
       "startDate": "21 Mar",
       "endDate": "19 Apr",
+      "symbol": "♈︎",
       "day": 21
     },
     {
       "zodiacName": "Taurus",
       "startDate": "20 Apr",
       "endDate": "20 May",
+      "symbol": "♉︎",
       "day": 21
     },
     {
       "zodiacName": "Gemini",
       "startDate": "21 May",
       "endDate": "20 Jun",
+      "symbol": "♊︎",
       "day": 22
     },
     {
       "zodiacName": "Cancer",
       "startDate": "21 Jun",
       "endDate": "22 Jul",
+      "symbol": "♋︎",
       "day": 22
     },
     {
       "zodiacName": "Leo",
       "startDate": "23 Jul",
       "endDate": "22 Aug",
+      "symbol": "♌︎",
       "day": 23
     },
     {
       "zodiacName": "Virgo",
       "startDate": "23 Aug",
       "endDate": "22 Sep",
+      "symbol": "♍︎",
       "day": 24
     },
     {
       "zodiacName": "Libra",
       "startDate": "23 Sep",
       "endDate": "22 Oct",
+      "symbol": "♎︎",
       "day": 24
     },
     {
       "zodiacName": "Scorpio",
       "startDate": "23 Oct",
       "endDate": "21 Nov",
+      "symbol": "♏︎",
       "day": 24
     },
     {
       "zodiacName": "Sagittarius",
       "startDate": "22 Nov",
       "endDate": "21 Dec",
+      "symbol": "♐︎",
       "day": 23
     },
     {
       "zodiacName": "Capricorn",
       "startDate": "22 Dec",
       "endDate": "19 Jan",
+      "symbol": "♑︎",
       "day": 22
     }
   ]

@@ -15,6 +15,7 @@ export interface UserData {
   month: number;
   day: number;
   zodiac: string;
+  symbol?: string;
 }
 
 export type Stores = {
@@ -58,6 +59,7 @@ const useStores = create<Stores>((set) => ({
     month: 0,
     day: 0,
     zodiac: "",
+    symbol: "",
   },
   setUserData: (userData) =>
     set((state) => ({

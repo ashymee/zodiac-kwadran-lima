@@ -1,23 +1,10 @@
-import useStores from "@/utils/useStores";
+import useHandler from "@/utils/useHandler";
 
 const BackButton = () => {
-  const { setIsValid, setFormData } = useStores();
+  const { resetForm } = useHandler();
 
   return (
-    <button
-      className="back-btn"
-      onClick={() => {
-        setIsValid(false);
-        setFormData({
-          name: "",
-          birthDate: {
-            day: "",
-            month: "",
-            year: "",
-          },
-        });
-      }}
-    >
+    <button className="back-btn" onClick={resetForm}>
       Kembali
     </button>
   );

@@ -61,7 +61,7 @@
     } /* end of form */
 
     .submitted-form-container {
-      @apply p-3 text-purple-900 flex flex-col h-full;
+      @apply p-3 text-purple-900 flex flex-col h-full relative;
 
       .text-container {
         @apply flex-1 h-full;
@@ -77,6 +77,10 @@
 
       .zodiac-item-container {
         @apply flex items-center justify-between px-2 rounded-lg;
+
+        &.active {
+          @apply border border-purple-900 rounded-lg;
+        }
 
         &:hover {
           @apply bg-purple-600/50;
